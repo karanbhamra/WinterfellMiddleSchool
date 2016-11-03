@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Student Absence Reporting System project for Comp 484.">
+    <meta name="author" content="Karan Bhamra, Armenak Mazmanyan">
+
+    <title>Comp 484 Final Project</title>
+
+    <!-- Include the Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Include the page CSS -->
+    <link href="css/484final.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Group for mobile devices -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#about" id="info">Information</a>
+                </li>
+                <li>
+                    <a href="#services" id="frm">Form</a>
+                </li>
+                <li>
+                    <a href="#contact" id="cnt">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Full Width Image Header -->
+<header class="header-image">
+    <div class="headline">
+        <div class="container">
+            <img src="images/logo.png" width="260" title="Winter is Coming" alt="The Winterfell Direwolves Logo">
+            <h2>Winterfell Middle School</h2>
+            <h3>Welcome to the Student Absence Reporting System.</h3>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+    <hr class="featurette-divider">
+
+    <!-- The following sections will act like "pages" -->
+    <!-- First Section -->
+    <div class="featurette" id="about">
+        <br>
+        <img class="featurette-image img-circle img-responsive pull-right" src="images/students.png" id="student"
+             alt="A generic image of young students.">
+        <h2 class="featurette-heading"><br>Student Absence
+            <span class="text-muted">Reporting</span>
+        </h2>
+        <p class="lead">Attending school every day has a positive impact on student learning and helps to put students
+            on a track towards success. Parents and guardians are responsible for ensuring that children attend school
+            and must authorize absences by notifying their child's school in advance or at the time of the absence.
+            While children are expected to attend school every day, there are reasons that might cause a student to be
+            absent. Valid absences include illness, observance of a religious holiday, death in the immediate family,
+            family emergency, situations beyond the control of the student, and other circumstances that cause
+            reasonable concern to the parent/guardian for the student’s safety or health.</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Second Section -->
+    <div class="featurette" id="services">
+        <img class="featurette-image img-circle img-responsive pull-left" src="images/form.png" id="formpic">
+        <h2 class="featurette-heading"><br>Fill out the form
+            <span class="text-muted">completely.</span>
+        </h2>
+        <p class="lead">
+            <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+            <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css"/>
+
+            <!-- Inline CSS based on choices in "Settings" tab -->
+            <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
+                font-family: Arial, Helvetica, sans-serif;
+                color: black
+            }
+
+            .bootstrap-iso form button, .bootstrap-iso form button:hover {
+                color: white !important;
+            }
+
+            .asteriskField {
+                color: red;
+            }</style>
+
+            <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form method="post" id="form">
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="name">
+                                    Student's Name
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <input class="form-control" id="name" name="name" placeholder="Johnny Smith"
+                                       type="text"/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="number">
+                                    Days Absent
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <input class="form-control" id="number" name="number" type="text"/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="grade">
+                                    Grade / Teacher
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <input class="form-control" id="grade" name="grade" type="text"/>
+      <span class="help-block" id="hint_grade">
+       Enter child's current grade and teacher.
+      </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="parentName">
+                                    Your Name and Relation to Student
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <input class="form-control" id="parentName" name="parentName"
+                                       placeholder="Sue Smith, Jonny's mom" type="text"/>
+      <span class="help-block" id="hint_parentName">
+       Enter your name
+      </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="key">
+                                    Key
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <input class="form-control" id="key" name="key" type="number"/>
+      <span class="help-block" id="hint_key">
+       Enter the secret key (used to prevent fraud)
+      </span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="tel">
+                                    Telephone #
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+
+
+                                <input class="form-control" id="tel" name="tel" placeholder="111-222-3333" type="text"/>
+      <span class="help-block" id="hint_tel">
+       Enter your daytime phone number
+      </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="email">
+                                    Your Email
+                                </label>
+                                <input class="form-control" id="email" name="email" type="text"/>
+      <span class="help-block" id="hint_email">
+       Enter your contact email.
+      </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="reason">
+                                    Reason for Absence
+       <span class="asteriskField">
+        *
+       </span>
+                                </label>
+                                <textarea class="form-control" cols="40" id="reason" name="reason"
+                                          rows="10"></textarea>
+      <span class="help-block" id="hint_textarea">
+       Provide as much information as possible.
+      </span>
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <button class="btn btn-primary " id="submit" name="submit" type="button">
+                                        Submit
+                                    </button>
+                                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                                    <button class="btn btn-danger " id="reset" name="reset" type="button">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Third Section -->
+    <div class="featurette" id="contact">
+        <img class="featurette-image img-circle img-responsive pull-right" src="images/contact.png">
+        <h2 class="featurette-heading">Contact us at
+            <span class="text-muted">Winterfell.</span>
+        </h2>
+        <p class="lead">
+            Address:<br>
+            1234 Main Road<br>
+            The North, Westeros 95307<br><br><br>
+            School phone: (209) 556-1920<br>
+            School Fax: (209) 538-8978<br>
+            Main Office: ext. 5361<br>
+            Activities: ext. 5379<br>
+            Attendance: ext. 5365/5366<br>
+            Counseling: ext. 5373/5367<br>
+            Discipline: ext. 5364<br>
+            Library: ext. 5369<br>
+            Nurse: ext. 5377</p>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Winterfell Middle School 2016</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<!-- Include JQUERY because it is used. -->
+<script src="js/jquery.js"></script>
+
+<!-- Include BOOTSTRAP because it is used. -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Include the main JS file -->
+<script type="text/javascript" src="js/484final.js"></script>
+
+</body>
+
+</html>
